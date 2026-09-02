@@ -1,0 +1,201 @@
+# ===========================
+# Python
+# ===========================
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+dist/
+*.egg-info/
+.eggs/
+pip-log.txt
+pip-delete-this-directory.txt
+
+# ===========================
+# Virtual environments
+# ===========================
+.venv/
+venv/
+env/
+ENV/
+new_env/
+miniconda3/
+
+# ===========================
+# Secrets (never commit)
+# ===========================
+.env
+.env.*
+!.env.example
+
+# ===========================
+# IDEs
+# ===========================
+.vscode/
+.idea/
+*.sublime-workspace
+
+# ===========================
+# Testing
+# ===========================
+.pytest_cache/
+.coverage
+coverage.xml
+
+# ===========================
+# Jupyter
+# ===========================
+.ipynb_checkpoints
+*.ipynb
+
+# ===========================
+# Training artifacts (large / generated)
+# ===========================
+checkpoints/
+**/checkpoints/
+*.pth
+*.pt
+*.ckpt
+*.h5
+*.model
+
+# Training logs (stdout/stderr from runs)
+run/
+
+# Plots / output images
+outputs/
+output/
+
+# ===========================
+# Data & vector DBs (large)
+# ===========================
+chroma_data/
+data/
+data2/
+data_multinews/
+*.db
+*.sqlite3
+
+# ===========================
+# WandB
+# ===========================
+wandb/
+.wandb/
+wandb-*/
+run-*/
+
+# ===========================
+# Scratch / planning / temp
+# ===========================
+/*.py
+*.json
+*.txt
+!requirements.txt
+!target_papers_metadata.json
+scratch/
+scenarios/
+plan*.txt
+plan*.md
+draft*/
+mistral_drafts/
+debug_*.py
+_*.py
+doc.md
+implentation.md
+test.ipynb
+self_supervised_openai/
+experiments/
+tests/
+
+# Root-level JSON outputs (comparison results, raw outputs)
+all_predictions*.txt
+citation_viz_data.json
+comparison_n3_output.json
+final_draft_with_feedback_gpt.json
+final_evaluation*.csv
+full_selected_papers.json
+multinews_eval_ids.json
+multinews_eval_summary.csv
+multinews_targets*.json
+output.json
+scenario1_n3_output.json
+scenario2_n3_output.json
+test_data.json
+
+# Evaluation outputs, logs, and generated drafts
+result*/
+*.log
+*_scores.csv
+*_summary.csv
+*_eval_log.txt
+*_run.log
+*_test.log
+
+# Zip archives
+*.zip
+
+# ===========================
+# Old / replaced scripts (not part of current pipeline)
+# ===========================
+/run_*.py
+/run_*.ps1
+build_multinews_graph.py
+run_4a_apifail_eval.py
+run_baseline_comparison_eval.py
+run_generation.py
+run_multimodel_longctx.py
+run_orchestrator_eval.py
+run_rag_mistral7b_eval.py
+run_3agent_no_feedback.py
+run_3agent_task.py
+run_ablation_refined.py
+run_ablation_targeted.py
+run_final_draft.py
+run_final_draft_with_feedback.py
+run_scenario_comparison.py
+
+# Dead / test-only code (not part of the published pipeline)
+src/main.py
+src/ippo.py
+src/agent/agent.py
+src/local_model.py
+src/evaluation/metrics_base.py
+src/rl_env/observation_manager.py
+src/agent/orchestrator.py
+src/agent/prompts_mds.py
+src/agent/prompts_orchestrator.py
+src/evaluation/*.md
+src/evaluation/*.ipynb
+src/rl_env/*.md
+README_TRAIN.md
+RUNNING_GUIDE.md
+
+# Old ablation files replaced by src/train_ablation_study.py
+src/train_ablation_no_component_reward.py
+src/train_ablation_no_draft_reward.py
+
+# ===========================
+# OS
+# ===========================
+.DS_Store
+Thumbs.db
+
+# ===========================
+# Misc
+# ===========================
+*.tmp
+*.bak
+.cache/
+tmp/
+logs/
+result/
+
+# ===========================
+# Assets (publish PNGs, not the PDF sources)
+# ===========================
+assets/*.pdf
+
+# Evaluation split shipped with the repo (30 target papers)
+!target_papers_metadata.json
